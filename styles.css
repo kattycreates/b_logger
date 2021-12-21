@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Josefin+Sans:wght@200&family=Oswald:wght@300&family=Raleway:wght@200&display=swap');
+:root{
+    --primary-color:#00A2E2;
+    --secondary-color:#000000;
+    --tertiary-color:#F5F5F5
+
+}
+* {
+box-sizing: border-box;
+}
+body{
+    background-color: var(--primary-color);
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    background-color:var(--secondary-color);
+    height: 15vh;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+header h4 span {
+    color: var(--primary-color);
+}
+header .logo{
+    color: var(--tertiary-color);
+    font-size: 3vw;
+  margin-left: 3vw;
+}
+.search{
+    background-color:transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 2vw;
+    padding: 1vw;
+    color: var(--tertiary-color);
+    margin-left: 3vw;
+}
+.search::placeholder{
+    color:var(--tertiary-color);
+    font-size: 1.5vw;
+}
+.search:focus{
+    outline: none;
+    background-color:var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 15vh;
+}
+.book{
+    width: 350px;
+    margin: 2vw;
+    background-color: var(--tertiary-color);
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px rgba(7, 88, 141, 0.8);
+}
+.book h3{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.2vw;
+    font-weight: bolder;
+    padding: 1vw;
+}
+.book img{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 350px;
+}
+.book-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+    padding: 2vw;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+.book-info span{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5vw;
+   
+    border-radius: 10px;
+    padding: 1vh;
+    
+}
+.book .rating{
+    border-radius: 50%;
+    padding: 1vw;
+   height: 70px;
+   width: 70px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    font-weight: bolder;
+    font-size: 15px;
+}
+.review {
+    background-color:var(--secondary-color);
+    padding: 2rem;
+    color: var(--tertiary-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    overflow-y: auto;
+    transition: transform 0.3s ease-in;
+    letter-spacing: 2px;
+    line-height: 5vh;
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+    
+  }
+  .review h3{
+    font-family: 'Amatic SC', cursive;
+  }
+  .review::-webkit-scrollbar{
+      display:none;
+  }
+  
+  .book:hover .review {
+    transform: translateY(0);
+  }
+  em{
+      color: var(--secondary-color);
+      font-weight: bold;
+      font-size: 1.5vw;
+  }
